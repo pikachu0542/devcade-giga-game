@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2wwcwwsq0ao7"]
+[gd_scene load_steps=4 format=3 uid="uid://b2wwcwwsq0ao7"]
 
-[ext_resource type="Script" uid="uid://cue05xubnlc2c" path="res://assets/scripts/StartScreen/start_screen.gd" id="1_kxo13"]
-[ext_resource type="Script" uid="uid://cy6wsnfi2dklo" path="res://assets/scripts/gui_manager.gd" id="1_pknda"]
+[ext_resource type="Script" path="res://assets/scripts/StartScreen/start_screen.gd" id="1_kxo13"]
+[ext_resource type="Script" path="res://assets/scripts/gui_manager.gd" id="1_pknda"]
+[ext_resource type="Theme" uid="uid://biogdbs0pnfd8" path="res://assets/sprites/s_screen.tres" id="2_swehi"]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_pknda")
@@ -14,6 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1, 0.998773)
+theme = ExtResource("2_swehi")
 script = ExtResource("1_kxo13")
 mutiplayer_button = NodePath("CenterContainer/VBoxContainer/Mutiplayer")
 singleplayer_button = NodePath("CenterContainer/VBoxContainer/SinglePlayer")
@@ -27,8 +29,10 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -49.5
-offset_right = 49.5
+offset_left = -110.0
+offset_top = 72.0885
+offset_right = 101.0
+offset_bottom = 72.0885
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -55,3 +59,26 @@ text = "Tutorial (not implmented)"
 [node name="QuitButton" type="Button" parent="Control/CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="Panel" type="Panel" parent="Control"]
+z_index = -1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -440.0
+offset_bottom = -823.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5.3683, 6.99838)
+
+[node name="Label" type="Label" parent="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 55.0
+offset_top = 133.163
+offset_right = 485.0
+offset_bottom = 233.163
+theme_override_font_sizes/font_size = 40
+text = "World Of WallHoppers"
